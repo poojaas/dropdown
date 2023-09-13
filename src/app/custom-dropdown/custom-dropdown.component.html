@@ -1,0 +1,13 @@
+<div class="custom-dropdown">
+    <div class="custom-dropdown--header" (click)="toggleDropdown()">
+      {{ selectedOption || placeholder }}
+      <span class="arrow up" *ngIf="isOpen"></span>
+      <span class="arrow down" *ngIf="!isOpen"></span>
+    </div>
+    <div  class="custom-dropdown--open"*ngIf="isOpen">
+      <div class="custom-dropdown--option" *ngFor="let option of options" (click)="selectOption(option)">
+        <span >{{ option }}</span>
+      </div>
+    </div>
+  </div>
+  
